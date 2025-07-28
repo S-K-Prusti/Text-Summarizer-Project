@@ -1,0 +1,21 @@
+transformers #provides pre-trained models from hugging face for NLP tasks like summarization
+transformers[sentencepiece] #installs additional dependencies needed for tokenization
+datasets #offers ready to use NLP datasets 
+sacrebleu #computation tool for evaluation metrics 
+rouge_score #computes ROUGE metrics which are standard for summarization evaluation
+py7zr #used to extract .7z compressed files which maybe required 
+pandas #for handling and transforming tabular data 
+nltk #for basic NLP preprocessing tasks like sentence tokenization,stopword removal etc
+tqdm #
+PyYAML #allows to read & write yaml config files which are used to manage pipeline 
+matplotlib #to visualize training metrics,evaluation scores 
+torch #framework used to train & run transformer models ; also handles computation graphs 
+notebook #to run jupyter notebooks for expts,prototype
+boto3 #
+mypy-boto3-s3
+python-box==6.0.2
+ensure==1.0.2
+fastapi==0.78.0
+uvicorn==0.18.3
+Jinja2==3.1.2
+-e . #it installs setup.py
