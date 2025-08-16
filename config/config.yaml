@@ -1,0 +1,12 @@
+artifacts_root: artifacts 
+# it will create a artifacts folder and will save all the generation or components within it
+
+data_ingestion:
+   root_dir: artifacts/data_ingestion
+   source_URL:  https://github.com/S-K-Prusti/Text-Summarizer-Project/raw/main/samsum_data.zip
+   local_data_files: artifacts/data_ingestion/data.zip
+   unzip_dir: artifacts/data_ingestion
+
+
+
+   
