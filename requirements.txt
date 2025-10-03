@@ -6,7 +6,7 @@ rouge_score #computes ROUGE metrics which are standard for summarization evaluat
 py7zr #used to extract .7z compressed files which maybe required 
 pandas #for handling and transforming tabular data 
 nltk #for basic NLP preprocessing tasks like sentence tokenization,stopword removal etc
-tqdm #
+tqdm #to provide visual feedback during long running operations to monitor the progress of code 
 PyYAML #allows to read & write yaml config files which are used to manage pipeline 
 matplotlib #to visualize training metrics,evaluation scores 
 torch #framework used to train & run transformer models ; also handles computation graphs 

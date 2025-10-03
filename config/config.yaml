@@ -1,3 +1,6 @@
+#yaml used for configuration management,pipeline setting
+#configuration = instr. or settings that tells the program how it should run
+
 artifacts_root: artifacts 
 # it will create a artifacts folder and will save all the generation or components within it
 
@@ -12,4 +15,12 @@ data_validation:
    STATUS_FILE: artifacts/data_validation/status.txt
    ALL_REQUIRED_FILES: ["train","test","validation"]
 
-   
+data_transformation:
+   root_dir: artifacts/data_transformation
+   data_path: artifacts/data_ingestion/samsum_dataset
+   tokenizer_name: google/pegasus-cnn_dailymail
+
+model_trainer:
+   root_dir: artifacts/model_trainer
+   data_path: artifacts/data_transformation/samsum_dataset
+   model_ckpt: google/pegasus-cnn_dailymail

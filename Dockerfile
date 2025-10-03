@@ -1,0 +1,2 @@
+#Its a text file whose job is to automate the creation of env so that the project can run anywhere without dependency issues
+#It creates a portable env where the code runs the same way on any laptop,cloud

@@ -1,3 +1,7 @@
+# It's a markdown file. 
+# Its a guidebook of the project
+# It tells what the project does
+
 # End to end Text-Summarizer-Project
 
 ## Workflows 
