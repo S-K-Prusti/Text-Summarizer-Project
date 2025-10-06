@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    border-radius: 1rem;
+}
+textarea {
+    resize: none;
+}
