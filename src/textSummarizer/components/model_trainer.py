@@ -4,6 +4,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from datasets import load_dataset, load_from_disk
 from textSummarizer.entity import ModelTrainerConfig
 import torch
+import os
 
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
@@ -29,11 +30,11 @@ class ModelTrainer:
         # )
 
         trainer_args = TrainingArguments(
-            output_dir=self.config.root_dir, num_train_epochs=1, warmup_steps=200,
+            output_dir=self.config.root_dir, num_train_epochs=3, warmup_steps=500,
             per_device_train_batch_size=1, per_device_eval_batch_size=1,
-            weight_decay=0.01, logging_steps=50, 
-            eval_strategy='steps', eval_steps=250, save_steps=250,
-            gradient_accumulation_steps=16
+            weight_decay=0.01, logging_steps=100, 
+            eval_strategy='steps', eval_steps=500, save_steps=500,
+            gradient_accumulation_steps=8
         )
 
 
@@ -45,6 +46,6 @@ class ModelTrainer:
         trainer.train()
 
         # save model
-        model.save_pretrained(os.path.join(self.config.root_dir,"bart-samsum-model"))
+        model.save_pretrained(os.path.join(self.config.root_dir,"pegasus-samsum-model"))
         # save tokenizer
         tokenizer.save_pretrained(os.path.join(self.config.root_dir,"tokenizer"))

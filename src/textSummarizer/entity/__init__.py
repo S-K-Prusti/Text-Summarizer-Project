@@ -31,7 +31,7 @@ class ModelTrainerConfig:
     warmup_steps: int
     per_device_train_batch_size: int
     weight_decay: float
-    logging_steps: 50
+    logging_steps: 100
     eval_strategy: str
     eval_steps: int
     save_steps: float
